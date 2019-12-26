@@ -16,6 +16,7 @@ import { MenuItemGroup } from './layout.model';
 })
 export class LayoutSidebarService {
     public applicationsFeatureFlagOn: boolean;
+    public chefInfraServerViewsFeatureFlagOn: boolean;
     public isIAMv2$: Observable<boolean>;
     public ServiceNowfeatureFlagOn: boolean;
     private workflowEnabled: boolean;
@@ -27,6 +28,7 @@ export class LayoutSidebarService {
         private featureFlagsService: FeatureFlagsService
     ) {
         this.isIAMv2$ = this.store.select(isIAMv2);
+        this.chefInfraServerViewsFeatureFlagOn = this.featureFlagsService.getFeatureStatus('chefInfraServerViews');
         this.applicationsFeatureFlagOn = this.featureFlagsService.getFeatureStatus('applications');
         this.ServiceNowfeatureFlagOn = this.featureFlagsService.getFeatureStatus('servicenow_cmdb');
         this.clientRunsStore.select(clientRunsWorkflowEnabled).subscribe(
@@ -80,6 +82,12 @@ export class LayoutSidebarService {
                     icon: 'storage',
                     route: '/infrastructure/client-runs',
                     visible: true
+                },
+                {
+                    name: 'Chef Servers',
+                    icon: 'storage',
+                    route: '/infrastructure/chef-servers',
+                    visible: this.chefInfraServerViewsFeatureFlagOn
                 },
                 {
                     name: 'Workflow',
