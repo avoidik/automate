@@ -15,6 +15,22 @@ import "components/automate-grpc/protoc-gen-policy/iam/annotations.proto";
 import "components/compliance-service/api/common/common.proto";
 
 service JobsService {
+	/*
+	Create a job
+
+	Creates a scan job. A scan job executes Chef InSpec against the specified nodes.
+	Requires a user-specified name. Type should be `detect` (checks if the node is reachable and reports the
+	platform information for the nodes) or `exec` (executes a set of profiles against the nodes).
+	Nodes to scan may be specified by including an array of node ids to scan or a node manager id along with some optional
+	filtering information.
+
+	Example:
+	```
+	{
+
+	}
+	```
+	*/
 	rpc Create(Job) returns (Id) {
 		option (google.api.http) = {
 			post: "/compliance/scanner/jobs"
