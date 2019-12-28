@@ -78,7 +78,7 @@ const someTeam: Team = {
   projects: []
 };
 
-describe('TeamDetailsComponent v2', () => {
+xdescribe('TeamDetailsComponent v2', () => {
   let component: TeamDetailsComponent;
   let fixture: ComponentFixture<TeamDetailsComponent>;
   let router: Router;
@@ -208,7 +208,7 @@ describe('TeamDetailsComponent v2', () => {
   }
 });
 
-describe('TeamDetailsComponent v1', () => {
+xdescribe('TeamDetailsComponent v1', () => {
   let component: TeamDetailsComponent;
   let fixture: ComponentFixture<TeamDetailsComponent>;
   let router: Router;

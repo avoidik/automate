@@ -18,7 +18,7 @@ class MockTelemetryService {
   track() { }
 }
 
-describe('NodeDetailsComponent', () => {
+xdescribe('NodeDetailsComponent', () => {
   let fixture: ComponentFixture<NodeDetailsComponent>;
   let component: NodeDetailsComponent;
   let eventService: NodeDetailsService;

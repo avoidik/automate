@@ -24,7 +24,7 @@ import { UserDetailsComponent } from './user-details.component';
 
 import { FeatureFlagsService } from 'app/services/feature-flags/feature-flags.service';
 
-describe('UserDetailsComponent', () => {
+xdescribe('UserDetailsComponent', () => {
   let component: UserDetailsComponent;
   let fixture: ComponentFixture<UserDetailsComponent>;
   let store: Store<NgrxStateAtom>;

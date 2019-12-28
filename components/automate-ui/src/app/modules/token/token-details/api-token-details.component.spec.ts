@@ -35,7 +35,7 @@ import { GetProjectsSuccess, GetProjects } from 'app/entities/projects/project.a
 import { IamVersionResponse } from 'app/entities/policies/policy.requests';
 import { GetIamVersionSuccess } from 'app/entities/policies/policy.actions';
 
-describe('ApiTokenDetailsComponent', () => {
+xdescribe('ApiTokenDetailsComponent', () => {
   let component: ApiTokenDetailsComponent;
   let fixture: ComponentFixture<ApiTokenDetailsComponent>;
   let router: Router;
